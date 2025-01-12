@@ -1,0 +1,52 @@
+.top-banner {
+  background-color: #ffe4b5; /* Light golden color */
+  color: #333; /* Dark text for contrast */
+  text-align: center;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.circle-image {
+  width: 200px; /* Adjust the size of the circle */
+  height: 200px; /* Ensure it is a square */
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures the image fits inside the circle */
+  border: 4px solid var(--primary); /* Optional border */
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh; /* Full height */
+  flex-direction: column;
+  text-align: center;
+}
+#tagline {
+  transition: opacity 1s;
+}
+.bio-txt {
+  font-size: 1rem; /* Smaller font size */
+  text-align: center; /* Center the text */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add some padding around the text */
+  max-width: 80%; /* Limit the width of the bio */
+  line-height: 1.5; /* Improve readability with some line spacing */
+}
+
+.icon-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.icon-container i {
+  font-size: 1rem;
+  margin: 0 15px;
+  transition: transform 0.3s ease;
+  color: black;
+}
+.icon-container i:hover {
+  transform: scale(1.2); /* Hover effect to scale the icons */
+}
