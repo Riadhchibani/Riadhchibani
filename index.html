@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="./style/portfolio.css" />
     <link rel="stylesheet" href="./style/skills.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
     <title>Riadh Chibani</title>
   </head>
   <body>
@@ -25,7 +28,7 @@
         <ul></ul>
         <ul>
           <li><a href="#" class="contrast">Home</a></li>
-          <li><a href="#portfolio" class="contrast">Portfolio</a></li>
+          <li><a href="#portfolio" class="contrast">Projects</a></li>
           <li><a href="#skills" class="contrast">Skills</a></li>
           <li><a href="#aboutMe" class="contrast">About Me</a></li>
           <li><a href="#contact" class="contrast">Contact</a></li>
@@ -78,8 +81,59 @@
       </div>
 
       <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Coming soon...</p>
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="https://via.placeholder.com/400x200" alt="Project 1" />
+            <div class="project-card-content">
+              <h3>Project 1</h3>
+              <p>
+                Description of Project 1. This is a cool project I worked on.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://via.placeholder.com/400x200" alt="Project 2" />
+            <div class="project-card-content">
+              <h3>Project 2</h3>
+              <p>Description of Project 2. Another awesome project!</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://via.placeholder.com/400x200" alt="Project 3" />
+            <div class="project-card-content">
+              <h3>Project 3</h3>
+              <p>Description of Project 3. This one is my favorite.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://via.placeholder.com/400x200" alt="Project 3" />
+            <div class="project-card-content">
+              <h3>Project 3</h3>
+              <p>Description of Project 3. This one is my favorite.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://via.placeholder.com/400x200" alt="Project 3" />
+            <div class="project-card-content">
+              <h3>Project 3</h3>
+              <p>Description of Project 3. This one is my favorite.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://via.placeholder.com/400x200" alt="Project 3" />
+            <div class="project-card-content">
+              <h3>Project 3</h3>
+              <p>Description of Project 3. This one is my favorite.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="skills">
@@ -96,41 +150,49 @@
 
       <section id="contact">
         <h2>Contact Me</h2>
-      <form class="contact-form" id="contactForm">
-        <!-- Email Field -->
-        <label for="email">Your Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          required
-        />
-        <!-- Message Field -->
-        <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Write your message here"
-          rows="4"
-          required
-        ></textarea>
-        <!-- Send Button -->
-        <button id="sendId" type="submit">
-          Send <i class="fas fa-paper-plane"></i>
-        </button>
-      </form>
+        <form class="contact-form" id="contactForm">
+          <!-- Email Field -->
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <!-- Message Field -->
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here"
+            rows="4"
+            required
+          ></textarea>
+          <!-- Send Button -->
+          <button id="sendId" type="submit">
+            Send <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
       </section>
       <button class="scroll-to-top" id="scrollToTop">😊</button>
     </main>
     <footer>
       <p>This website was built by Riadh using:</p>
-      
+
       <div class="tools">
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" title="HTML">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+          target="_blank"
+          title="HTML"
+        >
           <i class="fab fa-html5"></i>
         </a>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" title="CSS">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+          target="_blank"
+          title="CSS"
+        >
           <i class="fab fa-css3-alt"></i>
         </a>
         <a href="https://javascript.info/" target="_blank" title="JavaScript">
@@ -143,11 +205,9 @@
           <i class="fas fa-envelope"></i> EmailJS
         </a>
       </div>
-      
+
       <!-- Copyright -->
-      <div class="copyright">
-        &copy; 2025 Riadh. All rights reserved.
-      </div>
+      <div class="copyright">&copy; 2025 Riadh. All rights reserved.</div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./js/main.js"></script>
