@@ -1,5 +1,5 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+# Build the app and deploy it to GitHub Pages
+name: Deploy site to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -28,15 +28,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build static site
+        env:
+          GITHUB_PAGES: "true"
+          # Served from https://<user>.github.io/<repo>/ — use "/" for a <user>.github.io repo
+          GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
+        run: npm run build
+
+      - name: Add SPA fallback and disable Jekyll
+        run: |
+          cp dist/client/index.html dist/client/404.html
+          touch dist/client/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist/client
 
   # Deployment job
   deploy:
@@ -48,4 +67,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
